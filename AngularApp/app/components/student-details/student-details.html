@@ -1,0 +1,49 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<style>
+        .button {
+            background-color: rgb(215, 224, 131);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        </style>
+
+<body ng-app = "app">
+    <h3>Student List</h3>
+    <button class = "button" ng-click="vm.addStudentPage()"> Add Student</button>
+    <input type="text" placeholder="First Name" ng-model="firstName"/>
+    <button class = "button" ng-click="vm.findStudent()"> Search</button>
+    <button class = "button" ng-click="vm.clear()"> Refresh</button>
+    <table border=1|0>
+            <col width="130">
+            <col width="80">
+            <tr >
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th> 
+            <th>Actions</th>
+            </tr>
+            
+            <tr ng-repeat="student in students">
+                <td>{{$index+1}}</td>
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>
+                    <button class = "button" ng-click="vm.updateStudentPage(student)">Update Student</button>
+                    <button class = "button" ng-click="vm.deleteStudent(student.id)"> Delete Student </button>
+                </td>
+            </tr>
+    </table>
+   
+
+</body>
