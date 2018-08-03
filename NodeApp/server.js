@@ -17,6 +17,9 @@ app.use(function (req, res, next) {
 let studentRoute = require('./routes/student.route');
 app.use(express.static(path.join(__dirname, '../'))); 
 app.use('/student',studentRoute);
+app.get('/', function(req, res) {    
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 app.listen(port, function () {
     console.log("node api runnig at port:" + port);
 });
