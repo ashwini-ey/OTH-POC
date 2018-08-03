@@ -14,7 +14,7 @@
         .state('getStudents',
         {
             url: "/getStudents",
-            templateUrl: "components/student-details/student-details.html",
+            templateUrl: "AngularApp/app/components/student-details/student-details.html",
             controller: 'studentDetailsCtrl',
             controllerAs: 'vm',
             
@@ -22,7 +22,7 @@
         .state('addStudentPage',
         {
             url: "/addStudentPage",
-            templateUrl: "components/student-upsert/upsert-student.html",
+            templateUrl: "AngularApp/app/components/student-upsert/upsert-student.html",
             controller: 'upsertStudentCtrl',
             controllerAs: 'vm',
             
@@ -31,7 +31,7 @@
             .state('updateStudentPage',
             {
             url: "/updateStudentPage",
-            templateUrl: "components/student-upsert/upsert-student.html",
+            templateUrl: "AngularApp/app/components/student-upsert/upsert-student.html",
             controller: 'upsertStudentCtrl',
             controlerAs: 'vm'
         })
@@ -39,7 +39,7 @@
 
         
 
-    $urlRouterProvider.otherwise("/dashboard");
+    $urlRouterProvider.otherwise("/getStudents");
     
 }
 
