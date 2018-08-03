@@ -1,0 +1,16 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<h2> Student Details</h2>
+<div ng-app="app" ng-controller="upsertStudentCtrl">
+    <form name = "addStudentForm">
+        <input type="hidden" ng-model="id" value={{student.id}}/>
+        First Name: <br>
+        <input type ="text" ng-model="student.firstName" />
+        <br>
+        last Name: <br>
+        <input type = "text" ng-model ="student.lastName" />
+        <br><br>
+        <button ng-if="!student.id" ng-click="upsertStudent()">Add Student</button>
+        <button ng-if="student.id" ng-click="upsertStudent()">Update Student</button>
+    </form>
+</div>
