@@ -1,0 +1,17 @@
+{
+  "name": "nodeapp.api",
+  "version": "0.0.0",
+  "description": "nodeRestClient.Api",
+  "main": "server.js",
+  "author": {
+    "name": "dbuser"
+  },
+  "dependencies": {
+    "angular": "^1.7.2",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.3",
+    "node-rest-client": "^3.1.0",
+    "request": "^2.83.0"
+  }
+}
